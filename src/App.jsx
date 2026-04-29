@@ -2,12 +2,21 @@ import logo from "./assets/logo.png";
 import landingpage1 from "./assets/landingpage1.png";
 import landingpage2 from "./assets/landingpage2.png";
 import landingpage3 from "./assets/landingpage3.png";
+import brand1 from "./assets/brand1.png";
+import brand2 from "./assets/brand2.png";
+import brand3 from "./assets/brand3.png";
+import brand4 from "./assets/brand4.png";
+import brand5 from "./assets/brand5.png";
+import brand6 from "./assets/brand6.png";
+import brand7 from "./assets/brand7.jpg";
+import brand8 from "./assets/brand8.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
+  const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7, brand8];
 
   const slides = [
     {
@@ -54,7 +63,7 @@ function App() {
           <img
             src={logo}
             alt="company logo"
-            className="h-15 w-auto object-contain"
+            className="object-contain w-auto h-15"
           />
         </div>
 
@@ -88,11 +97,10 @@ function App() {
           {/* Nepal Flag Icon */}
           <div className="w-5 h-5 ml-2">
             <svg
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="-17.582 -4.664 71.571 87.246"
-            >
-              <use xlink:href="#a" stroke="#003893" stroke-width="5.165" />
+            ><use xlinkHref="#a" stroke="#003893" strokeWidth="5.165" />
               <path
                 id="a"
                 d="M-15 37.574h60L-15 0v80h60l-60-60z"
@@ -109,38 +117,38 @@ function App() {
                         d="M.195-.98L0-1.39l-.195.408"
                         transform="rotate(11.25)"
                       />
-                      <use xlink:href="#b" transform="rotate(22.5)" />
-                      <use xlink:href="#b" transform="rotate(45)" />
+                      <use xlinkHref="#b" transform="rotate(22.5)" />
+                      <use xlinkHref="#b" transform="rotate(45)" />
                     </g>
-                    <use xlink:href="#c" transform="rotate(67.5)" />
+                    <use xlinkHref="#c" transform="rotate(67.5)" />
                   </g>{" "}
-                  <use xlink:href="#d" transform="scale(-1 1)" />
+                  <use xlinkHref="#d" transform="scale(-1 1)" />
                 </g>{" "}
                 <g transform="matrix(8.1434 0 0 8.1434 0 58.787)">
                   <circle r="1" />
                   <g id="g">
                     <g id="f">
                       <path id="e" d="M.259.966L0 1.576l-.259-.61" />{" "}
-                      <use xlink:href="#e" transform="rotate(180)" />
+                      <use xlinkHref="#e" transform="rotate(180)" />
                     </g>
-                    <use xlink:href="#f" transform="rotate(90)" />
+                    <use xlinkHref="#f" transform="rotate(90)" />
                   </g>{" "}
-                  <use xlink:href="#g" transform="rotate(30)" />
-                  <use xlink:href="#g" transform="rotate(60)" />
+                  <use xlinkHref="#g" transform="rotate(30)" />
+                  <use xlinkHref="#g" transform="rotate(60)" />
                 </g>
               </g>
             </svg>
           </div>
 
           <button
-            className="py-2 px-4 bg-blue-600 text-white rounded-xl"
+            className="px-4 py-2 text-white bg-blue-600 rounded-xl"
             onClick={() => navigate("/login")}
           >
             Login
           </button>
 
           <button
-            className="py-2 px-4 bg-blue-600 text-white rounded-xl"
+            className="px-4 py-2 text-white bg-blue-600 rounded-xl"
             onClick={() => navigate("/register")}
           >
             Sign Up
@@ -148,17 +156,17 @@ function App() {
         </div>
       </header>
 
-      <div className="relative w-full overflow-hidden py-2">
+      <div className="relative w-full py-2 overflow-hidden">
         <button
           type="button"
           onClick={goToPreviousSlide}
           aria-label="Previous slide"
-          className="absolute left-4 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/90 p-3 text-gray-700 shadow-md transition hover:bg-white"
+          className="absolute z-30 p-3 text-gray-700 transition -translate-y-1/2 rounded-full shadow-md left-4 top-1/2 bg-white/90 hover:bg-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="h-5 w-5 fill-current"
+            className="w-5 h-5 fill-current"
           >
             <path d="M14.7 5.3a1 1 0 0 1 0 1.4L10.41 11l4.3 4.3a1 1 0 1 1-1.42 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.41 0z" />
           </svg>
@@ -168,12 +176,12 @@ function App() {
           type="button"
           onClick={goToNextSlide}
           aria-label="Next slide"
-          className="absolute right-4 top-1/2 z-30 -translate-y-1/2 rounded-full bg-white/90 p-3 text-gray-700 shadow-md transition hover:bg-white"
+          className="absolute z-30 p-3 text-gray-700 transition -translate-y-1/2 rounded-full shadow-md right-4 top-1/2 bg-white/90 hover:bg-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="h-5 w-5 fill-current"
+            className="w-5 h-5 fill-current"
           >
             <path d="M9.3 18.7a1 1 0 0 1 0-1.4l4.29-4.3-4.3-4.3a1 1 0 0 1 1.42-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.41 0z" />
           </svg>
@@ -184,7 +192,7 @@ function App() {
           style={{ transform: `translateX(-${activeSlide * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="flex w-full shrink-0 px-16">
+            <div key={index} className="flex w-full px-16 shrink-0">
               <div className="w-1/2">
                 <h1 className="text-5xl font-bold text-blue-600 mt-30 whitespace-nowrap">
                   {slide.titleBlue}
@@ -196,14 +204,14 @@ function App() {
                   {slide.description}
                 </p>
                 <button
-                  className="inline-flex items-center px-4 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition mt-5"
+                  className="inline-flex items-center px-4 py-3 mt-5 text-white transition bg-blue-600 rounded hover:bg-blue-700"
                   onClick={() => navigate("/register")}
                 >
                   <span>Sign Up Now </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 640 640"
-                    className="ml-1 mt-1 size-6 text-white fill-current"
+                    className="mt-1 ml-1 text-white fill-current size-6"
                   >
                     <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
                   </svg>
@@ -211,7 +219,7 @@ function App() {
                 <button className="ml-3">Know More</button>
               </div>
 
-              <div className="w-1/2 flex justify-end">
+              <div className="flex justify-end w-1/2">
                 <img
                   src={slide.image}
                   alt="landing"
@@ -221,6 +229,34 @@ function App() {
             </div>
           ))}
         </div>
+
+          
+      <div className="py-5 mt-2 overflow-hidden bg-gray-50">
+  <div className="flex gap-20 w-max animate-scroll">
+    
+    {/* First set */}
+    {brands.map((logo, index) => (
+      <img
+        key={index}
+        src={logo}
+        alt="brand"
+        className="object-contain w-auto h-12 transition opacity-70 hover:opacity-100"
+      />
+    ))}
+
+    {/* Duplicate for seamless loop */}
+    {brands.map((logo, index) => (
+      <img
+        key={`dup-${index}`}
+        src={logo}
+        alt="brand"
+        className="object-contain w-auto h-12 transition opacity-70 hover:opacity-100"
+      />
+    ))}
+
+  </div>
+</div>
+
 
         
       </div>
